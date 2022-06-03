@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.RequestController">
+   <children>
+      <Pane prefHeight="57.0" prefWidth="495.0" style="-fx-background-color: #DADADA;">
+         <children>
+            <Label fx:id="username" layoutX="105.0" layoutY="14.0" prefHeight="18.0" prefWidth="125.0" />
+            <Label fx:id="bio" layoutX="106.0" layoutY="34.0" prefHeight="18.0" prefWidth="117.0" text="Label" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c894c" height="27.0" layoutX="326.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 40; -fx-arc-width: 30;" width="71.0" />
+            <Label fx:id="interest1" alignment="CENTER" layoutX="331.0" layoutY="20.0" prefHeight="18.0" prefWidth="61.0" text="Accept" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="accept" layoutX="327.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.0" prefHeight="27.0" prefWidth="71.0" text="Button" />
+         </children></Pane>
+      <ImageView fx:id="image" fitHeight="41.0" fitWidth="71.0" layoutX="9.0" layoutY="7.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/kheer.jpg" />
+         </image>
+         <effect>
+            <Reflection fraction="0.5" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e01122" height="27.0" layoutX="409.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 40; -fx-arc-width: 30;" width="71.0" />
+      <Label fx:id="interest" alignment="CENTER" layoutX="419.0" layoutY="18.0" prefHeight="18.0" prefWidth="51.0" text="Decline" textFill="#fff8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="decline" layoutX="409.0" layoutY="15.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.0" prefHeight="27.0" prefWidth="71.0" text="Button" />
+   </children>
+</AnchorPane>

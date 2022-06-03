@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.dashboardController">
+   <children>
+      <ListView fx:id="settings" fixedCellSize="-8.0" layoutY="89.0" prefHeight="604.0" prefWidth="162.0" style="-fx-background-color: #252525; -fx-border-color: #e01122; -fx-border-width: 5;" />
+      <Pane layoutX="2.0" layoutY="119.0" prefHeight="46.0" prefWidth="162.0" style="-fx-background-color: #e01122;">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="48.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-settings-system-daydream-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" prefHeight="94.0" prefWidth="671.0" style="-fx-background-color: #252525; -fx-border-color: #e01122; -fx-border-width: 5;">
+         <children>
+            <Label fx:id="bio" layoutX="141.0" layoutY="23.0" prefHeight="64.0" prefWidth="210.0" text="bio" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="571.0" layoutY="41.0" prefHeight="40.0" prefWidth="84.0" text="connections" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="connections" alignment="CENTER" layoutX="476.0" layoutY="24.0" prefHeight="53.0" prefWidth="84.0" textFill="#fff9f9">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="84.0" layoutX="297.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-sign-out-100.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Signout" layoutX="295.0" layoutY="28.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.05" prefHeight="46.0" prefWidth="57.0" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="MenuScroll" layoutX="160.0" layoutY="96.0" onMouseMoved="#HoverHandled" prefHeight="553.0" prefWidth="506.0" style="-fx-background-color: #DADADA;">
+         <content>
+            <GridPane fx:id="grid" prefHeight="186.0" prefWidth="234.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+            </GridPane>
+         </content></ScrollPane>
+      <Circle fill="#f0f2f4" layoutX="80.0" layoutY="75.0" radius="50.0" strokeType="INSIDE" strokeWidth="10.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke></Circle>
+      <ImageView fx:id="profilePic" fitHeight="75.0" fitWidth="86.0" layoutX="43.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/chefgif.gif" />
+         </image>
+      </ImageView>
+      <Pane layoutX="161.0" layoutY="648.0" prefHeight="46.0" prefWidth="506.0" style="-fx-background-color: #e01122;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-newsletter-66.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="64.0" layoutX="411.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-search-bar-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="269.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-add-image-30.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Newsfeed" layoutX="6.0" layoutY="1.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.05" prefHeight="46.0" prefWidth="57.0" />
+            <Button fx:id="Upload" layoutX="261.0" layoutY="1.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.05" prefHeight="40.0" prefWidth="57.0" />
+            <Button fx:id="Search" layoutX="402.0" layoutY="-3.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.05" prefHeight="46.0" prefWidth="57.0" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/icons8-view-headline-24.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ViewRequests" layoutX="125.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.05" prefHeight="46.0" prefWidth="57.0" />
+         </children>
+      </Pane>
+      <Button fx:id="uploadProfile" layoutX="4.0" layoutY="208.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="23.0" prefWidth="154.0" text="Upload Profile Picture" />
+      <Button fx:id="UpdateBio" layoutX="3.0" layoutY="234.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="23.0" prefWidth="154.0" text="Update Bio" />
+      <Button fx:id="AccountPrivacy" layoutX="3.0" layoutY="260.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="23.0" prefWidth="154.0" text="Account Privacy" />
+      <Button fx:id="AccountSecurity" layoutX="3.0" layoutY="286.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="23.0" prefWidth="154.0" text="Account Security" />
+      <Button fx:id="deleteAccount" layoutX="3.0" layoutY="312.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="23.0" prefWidth="154.0" text="Delete Account" />
+      <Button fx:id="updateInterests" layoutX="3.0" layoutY="338.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="26.0" prefWidth="154.0" text="Update Interests" />
+   </children>
+</AnchorPane>

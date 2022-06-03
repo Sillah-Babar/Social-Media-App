@@ -1,0 +1,181 @@
+package com.example.project;
+
+import java.util.ArrayList;
+
+public class Profile {
+    Integer id;
+    String username;
+    String passwr;
+    boolean  public_profile;
+    boolean deleteAccount;
+    String profilepic;
+    ArrayList<String> interests;
+    ArrayList<String> images;
+    static Profile profile;
+    ArrayList<Integer> connections;
+    String bio;
+    ArrayList<Integer> requests;
+    ArrayList<String> dashboardpics;
+
+    public void setRequests(ArrayList<Integer> requests) {
+        this.requests = requests;
+    }
+
+    public ArrayList<Integer> getRequests() {
+        return requests;
+    }
+
+    public void setData()
+    {
+        this.setId(1);
+        this.setProfilepic("profile_pic.png");
+        this.setUsername("sillah");
+        this.setPasswr("babar");
+        this.setBio("Adios");
+        this.setPublic_profile(true);
+        //obj.setProfilepic("1profile_pic.png");
+        this.getInterests().add("Fitness");
+        this.getInterests().add("Makeup");
+        this.getConnections().add(2);
+        this.getConnections().add(3);
+        this.getConnections().add(4);
+        this.getConnections().add(5);
+        this.getConnections().add(6);
+
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Profile()
+    {
+        id=0;
+        requests=new ArrayList<Integer>();
+        interests=new ArrayList<String>();
+        images=new ArrayList<String>();
+        connections=new ArrayList<Integer>();
+        username="";
+        passwr="";
+        public_profile=false;
+        profilepic="profile_pic.png";
+        profile=null;
+        deleteAccount=false;
+        bio="";
+        dashboardpics=new ArrayList<String>();
+    }
+
+    public void setProfile(profile_data pr)
+    {
+
+        id=pr.getId();
+        requests=pr.getRequests();
+        interests=pr.getInterests();
+        images=pr.getImages();
+        connections=pr.getConnections();
+        username=pr.getUsername();
+        passwr=pr.getPasswr();
+        public_profile=pr.isPublic_profile();
+        profilepic=pr.getProfilepic();
+
+        deleteAccount=pr.isDeleteAccount();
+        bio=pr.getBio();
+        dashboardpics=pr.getDashboardpics();
+    }
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setDashboardpics(ArrayList<String> dashboardpics) {
+        this.dashboardpics = dashboardpics;
+    }
+
+    public ArrayList<String> getDashboardpics() {
+        return dashboardpics;
+    }
+
+    public static Profile getInstance()
+    {
+        if(profile==null)
+        {
+            profile=new Profile();
+            profile.setData();
+        }
+        return profile;
+    }
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPasswr(String passwr) {
+        this.passwr = passwr;
+    }
+
+    public void setPublic_profile(boolean public_profile) {
+        this.public_profile = public_profile;
+    }
+
+    public void setDeleteAccount(boolean deleteAccount) {
+        this.deleteAccount = deleteAccount;
+    }
+
+    public boolean isDeleteAccount() {
+        return deleteAccount;
+    }
+
+    public void setProfilepic(String profilepic) {
+        this.profilepic = profilepic;
+    }
+
+    public void setInterests(ArrayList<String> interests) {
+        this.interests = interests;
+    }
+
+    public void setImages(ArrayList<String> images) {
+        this.images = images;
+    }
+
+    public void setConnections(ArrayList<Integer> connections) {
+        this.connections = connections;
+    }
+
+    public String getPasswr() {
+        return passwr;
+    }
+
+    public boolean isPublic_profile() {
+        return public_profile;
+    }
+
+    public String getProfilepic() {
+        return profilepic;
+    }
+
+    public ArrayList<String> getInterests() {
+        return interests;
+    }
+
+    public ArrayList<String> getImages() {
+        return images;
+    }
+
+    public ArrayList<Integer> getConnections() {
+        return connections;
+    }
+    public Integer getTotalConnections()
+    {
+        return connections.size();
+    }
+
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.NewsfeedImageController">
+   <children>
+      <Pane layoutX="26.0" layoutY="26.0" prefHeight="297.0" prefWidth="442.0" style="-fx-background-color: #E4DCFF;">
+         <children>
+            <Circle fill="#ae3a44" layoutX="43.0" layoutY="34.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="profilepic" fitHeight="41.0" fitWidth="49.0" layoutX="19.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="username" alignment="CENTER" layoutX="81.0" layoutY="24.0" prefHeight="21.0" prefWidth="114.0" text="Label">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="commentcheckboc" layoutX="406.0" layoutY="16.0" mnemonicParsing="false" onAction="#actionHandled" />
+            <Label layoutX="260.0" layoutY="16.0" prefHeight="21.0" prefWidth="129.0" text="Turn off comments" />
+            <ImageView fx:id="LikeImage" fitHeight="49.0" fitWidth="64.0" layoutX="11.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/fullHeart.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="comment" layoutX="208.0" layoutY="261.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="21.0" prefWidth="89.0" text="Comment" />
+            <Button fx:id="viewcomment" layoutX="315.0" layoutY="261.0" mnemonicParsing="false" onAction="#actionHandled" prefHeight="25.0" prefWidth="107.0" text="View Comments" />
+            <ImageView fx:id="newspic" fitHeight="166.0" fitWidth="407.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="Likebutton" layoutX="11.0" layoutY="253.0" mnemonicParsing="false" onAction="#actionHandled" opacity="0.0" prefHeight="41.0" prefWidth="49.0" text="Button" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
